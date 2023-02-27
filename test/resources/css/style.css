@@ -1,0 +1,15 @@
+nav
+{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    justify-content: center;
+    color: black;
+}
+a{
+
+    color: brown;
+    padding: 10px;
+    margin: 5px;
+
+}
