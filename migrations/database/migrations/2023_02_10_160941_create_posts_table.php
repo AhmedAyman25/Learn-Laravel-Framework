@@ -22,7 +22,7 @@ return new class extends Migration
                 // $table->foreign('user_id')->references('id')->on('users');
 
             // foreign key 2nd method
-                $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+                $table->foreignId('user_id')->constrained()->cascadeOnDelete(); 
 
             $table->boolean('check')->default(0);
             $table->timestamps();
