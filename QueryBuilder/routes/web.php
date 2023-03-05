@@ -23,7 +23,7 @@ Route::controller(PostsController::class)->group(function(){
 
 
 Route::get('posts','index')->name('posts');
-Route::get('post/create', 'create');
+Route::get('post/create', 'create')->name('post.create');
 Route::post('post/insert','insert')->name('post.insert');
 Route::get('post/edit/{id}','edit')->name('post.edit');  
 Route::PUT('post/update/{id}','update')->name('post.update'); // PUT -> for update
