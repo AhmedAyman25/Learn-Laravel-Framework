@@ -13,8 +13,8 @@ class PostsController extends Controller
     public function index(){
          
         
-       // $posts = DB::table('posts')->find(3); // when return data by id  we use find(id)
-            // return $posts;
+    //    $posts = DB::table('posts')->find(3); // when return data by id  we use find(id)
+    //         return $posts;
        /*
             $title = DB::table('posts')->where('id',3)->value('title'); // extract a single value from a record using the value('ColumnName') 
                 return $title;
@@ -65,13 +65,6 @@ class PostsController extends Controller
         $posts = DB::table('posts')->get();
 
         return view('posts.index',compact('posts'));
-
-
-
-
-
-
-
 
          
         }
