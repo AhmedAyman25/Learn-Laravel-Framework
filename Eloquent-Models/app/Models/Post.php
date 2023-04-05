@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-   use HasFactory;
-   
+    use HasFactory;
+    protected $table = 'posts'; // optional 
+    public $fillable = ['title','body']; // required when using 'create' method to insert data into database
+    public $hidden = [];
     
 }
