@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -34,13 +35,18 @@ class PostController extends Controller
         // $post->title = $request->PostName;
         // $post->body = $request->PostBody;
         // $post->save();
+
         Post::create([
             'title' => $request->PostName,
             'body' => $request->PostBody
-            
+
         ]);
 
+
+
         return response('data added !!');
+
+
     }
 
     /**
@@ -48,7 +54,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return $post;
     }
 
     /**
@@ -56,7 +62,7 @@ class PostController extends Controller
      */
     public function edit( $id)
     {
-        
+
     //     $post = Post::find($id);
     //    if($post){
     //     return view('posts.edit',compact('post'));
@@ -86,6 +92,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return to_route('posts.index');
+
     }
 }
